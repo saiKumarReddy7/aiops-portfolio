@@ -1,0 +1,11 @@
+# Never push these to GitHub
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+mlenv/
+*.pkl
+*.model
+node_modules/
+target/
