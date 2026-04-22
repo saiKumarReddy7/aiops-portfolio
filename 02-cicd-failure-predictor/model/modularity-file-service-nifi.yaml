@@ -1,0 +1,59 @@
+//Correct the syntax of the YAML file 
+kind: Service
+apiVersion: v1
+metadata:
+  name: <norcnifi_name>-<dos_shared_namespace>-nifi-modularity-file
+  namespace: <dos_shared_namespace>
+  labels:
+    app: nifi
+    app.kubernetes.io/managed-by: Helm
+    heritage: Helm
+    release: <norcnifi_name>-<dos_shared_namespace>
+  annotations:
+    meta.helm.sh/release-name: <norcnifi_name>-<dos_shared_namespace>
+    meta.helm.sh/release-namespace: <dos_shared_namespace>
+    prometheus.io/port: '9092'
+    prometheus.io/scrape: 'true'
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: 'true'
+spec:
+  ports:
+    - name: modularity-file
+      protocol: TCP
+      port: 8888
+      targetPort: 8888
+      selector:
+    app: nifi
+    release: <norcnifi_name>-<dos_shared_namespace>
+  clusterIP: None
+  type: ClusterIP
+  sessionAffinity: None
+
+  // Correct the indentation of the above manifest file and remove the comments. The corrected YAML file should look like this:
+kind: Service
+apiVersion: v1
+metadata: 
+  name: <norcnifi_name>-<dos_shared_namespace>-nifi-modularity-file
+  namespace: <dos_shared_namespace>
+  labels:
+    app: nifi
+    app.kubernetes.io/managed-by: Helm
+    heritage: Helm
+    release: <norcnifi_name>-<dos_shared_namespace>
+  annotations:
+    meta.helm.sh/release-name: <norcnifi_name>-<dos_shared_namespace>
+    meta.helm.sh/release-namespace: <dos_shared_namespace>
+    prometheus.io/port: '9092'
+    prometheus.io/scrape: 'true'
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: 'true' 
+spec:
+  ports:
+    - name: modularity-file
+      protocol: TCP
+      port: 8888
+      targetPort: 8888
+  selector:
+    app: nifi   
+    release: <norcnifi_name>-<dos_shared_namespace>
+  clusterIP: None   
+  type: ClusterIP
+  sessionAffinity: None   
