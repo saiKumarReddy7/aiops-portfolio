@@ -1,0 +1,16 @@
+alert_id,timestamp,severity,service,alert_message
+1,2024-01-01 10:00:00,HIGH,payment-service,Payment service is down and not responding to requests
+2,2024-01-01 10:01:00,HIGH,payment-service,Payment service unavailable requests are failing
+3,2024-01-01 10:01:30,HIGH,payment-service,Payment gateway not responding service is down
+4,2024-01-01 10:02:00,MEDIUM,database,Database connection pool exhausted too many connections
+5,2024-01-01 10:02:30,MEDIUM,database,Database max connections reached connection pool full
+6,2024-01-01 10:03:00,MEDIUM,database,Cannot connect to database connection limit exceeded
+7,2024-01-01 10:03:30,HIGH,payment-service,Payment service request timeout service unavailable
+8,2024-01-01 10:04:00,LOW,cache,Redis cache miss rate is high performance degraded
+9,2024-01-01 10:04:30,LOW,cache,Cache hit rate dropped Redis performance issue detected
+10,2024-01-01 10:05:00,HIGH,api-gateway,API gateway returning 500 errors upstream service failed
+11,2024-01-01 10:05:30,HIGH,api-gateway,API gateway 500 internal server error upstream failure
+12,2024-01-01 10:06:00,MEDIUM,database,Database slow query detected response time exceeded threshold
+13,2024-01-01 10:06:30,LOW,cache,Redis memory usage high cache eviction occurring
+14,2024-01-01 10:07:00,HIGH,api-gateway,Upstream service failure API gateway errors increasing
+15,2024-01-01 10:07:30,HIGH,payment-service,Payment processing failed service not responding
